@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Stairs" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 5.0
+margin_bottom = 5.0
