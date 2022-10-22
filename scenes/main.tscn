@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://entities/legs/legs.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/world/world.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/tweak/tweak.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Node2D"]
 
@@ -10,4 +11,20 @@ position = Vector2( -4, 63 )
 scale = Vector2( 7, 7 )
 
 [node name="Legs" parent="." instance=ExtResource( 1 )]
-position = Vector2( 61, 699 )
+position = Vector2( 15, 665 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0.443137, 0, 1, 1 )
+margin_left = 857.0
+margin_top = 724.0
+margin_right = 1162.0
+margin_bottom = 867.0
+text = "<SPACE> to step
+<ESC> or <R> to reset"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Config" parent="." instance=ExtResource( 3 )]
+
+[connection signal="config_changed" from="Config" to="Legs" method="_on_config_changed"]

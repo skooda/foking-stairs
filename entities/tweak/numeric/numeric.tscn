@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://entities/tweak/numeric/numeric.gd" type="Script" id=2]
+
+[node name="Numeric" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 93.0
+margin_bottom = 20.0
+
+[node name="Input" type="LineEdit" parent="."]
+margin_top = 21.0
+margin_right = 94.0
+margin_bottom = 45.0
+expand_to_text_length = true
+
+[connection signal="text_entered" from="Input" to="." method="_on_Input_text_entered"]

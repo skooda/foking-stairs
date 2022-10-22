@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://entities/tweak/numeric/numeric.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/tweak/tweak.gd" type="Script" id=2]
+
+[node name="Config" type="Node"]
+script = ExtResource( 2 )
+
+[node name="max_lift" parent="." instance=ExtResource( 1 )]
+position = Vector2( 12, 17 )
+label = "Max lift"
+value = 100
+
+[node name="speed" parent="." instance=ExtResource( 1 )]
+position = Vector2( 165, 16 )
+label = "Speed"
+value = 3
+
+[node name="fwd_speed" parent="." instance=ExtResource( 1 )]
+position = Vector2( 316, 16 )
+label = "Fwd speed"
+value = 5
+
+[node name="acceleration" parent="." instance=ExtResource( 1 )]
+position = Vector2( 286, -71 )
+label = "Accelreration"
+value = 1
+
+[node name="defocuser" type="LineEdit" parent="."]
+margin_left = -74.0
+margin_top = -32.0
+margin_right = -16.0
+margin_bottom = -8.0
+
+[connection signal="value_changed" from="max_lift" to="." method="_on_value_changed"]
+[connection signal="value_changed" from="speed" to="." method="_on_value_changed"]
+[connection signal="value_changed" from="fwd_speed" to="." method="_on_value_changed"]
+[connection signal="value_changed" from="acceleration" to="." method="_on_value_changed"]
