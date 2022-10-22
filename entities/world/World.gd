@@ -11,9 +11,6 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	move_local_y(0.1)
-	move_local_x(-0.1)
-	
+func _input(event):
+	if event.is_action_pressed("reset"):
+		get_tree().reload_current_scene() 

@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://entities/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/legs/legs.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/world/world.tscn" type="PackedScene" id=2]
 
 [node name="Main" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 11, 77 )
-
 [node name="World" parent="." instance=ExtResource( 2 )]
-position = Vector2( -13, 3 )
+position = Vector2( -4, 63 )
+scale = Vector2( 7, 7 )
+
+[node name="Legs" parent="." instance=ExtResource( 1 )]
+position = Vector2( 61, 699 )
