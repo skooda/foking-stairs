@@ -11,13 +11,12 @@ config_version=4
 [application]
 
 config/name="Own"
-run/main_scene="res://scenes/Main.tscn"
+run/main_scene="res://scenes/main.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=128
-window/size/height=96
+window/size/height=768
 window/size/fullscreen=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
